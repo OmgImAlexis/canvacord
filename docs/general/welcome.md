@@ -76,5 +76,8 @@ client.on("message", async (message) => {
 client.login("Your_Bot_Token_here");
 ```
 
+# Support me
+[![](https://www.paypalobjects.com/webstatic/icon/pp258.png)](https://paypal.me/devsnowflake)
+
 # Note
 > ⚠ | In order to use `Canvacord#Welcomer`/`Canvacord#Leaver`/`Canvacord#CaptchaGen`, you may need to install packages like **[discord-canvas](https://npmjs.com/package/discord-canvas)** & **[captcha-canvas](https://npmjs.com/package/captcha-canvas)**.

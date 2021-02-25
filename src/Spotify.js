@@ -118,7 +118,7 @@ class Spotify {
 
     /**
      * Set progressbar details
-     * @param {("TRACK"|"BAR")} type Progressbar type
+     * @param {"TRACK"|"BAR"} type Progressbar type
      * @param {string} color Color to set
      * @returns {Spotify}
      */
@@ -208,7 +208,7 @@ class Spotify {
 
     /**
      * Set background
-     * @param {("COLOR"|"IMAGE")} type Background type
+     * @param {"COLOR"|"IMAGE"} type Background type
      * @param {string|Buffer|Canvas.Image} data Background data
      * @returns {Spotify}
      */
@@ -292,11 +292,11 @@ class Spotify {
 
         // progressbar track
         ctx.rect(170, 170, 300, 4);
-        ctx.fillStyle = this.progressBar.bgColor || "#E8E8E8";
+        ctx.fillStyle = "#E8E8E8";
         ctx.fillRect(170, 110, 300, 4);
 
         // progressbar
-        ctx.fillStyle = this.progressBar.color || "#1DB954";
+        ctx.fillStyle = "#1DB954";
         ctx.fillRect(170, 110, this.__calculateProgress(progress, total), 4);
 
         // return

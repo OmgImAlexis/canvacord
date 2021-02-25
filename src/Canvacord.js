@@ -14,22 +14,22 @@ const circle = require("../plugins/circle");
 const round = require("../plugins/round");
 const Util = require("./Util");
 
+
 /**
- * **⚠ You may not instantiate Canvacord class! ⚠**
- * You can access this class with `require("canvacord").Canvas`.
- * <warn>Note: This is a fully static class. Try not to instantiate this!</warn>
+ * Canvacord Memes Generator
  * @example const Canvacord = require("canvacord");
- *
+ * 
  * Canvacord.Canvas.trigger("./image.png")
  *  .then(triggered => {
  *      Canvacord.write(triggered, "triggered.gif");
  *  })
  */
 class Canvacord {
-    
-    /*
-    * <warn>Static class</warn>
-    */
+
+    /**
+     * **⚠ You may not instantiate Canvacord class! ⚠**
+     * @hideconstructor
+     */
     constructor() {
         throw new Error(`The ${this.constructor.name} class may not be instantiated!`);
     }
@@ -711,15 +711,15 @@ class Canvacord {
     /**
      * TicTacToe
      * @param {object} fill TicTacToe params
-     * @param {("X"|"O")} [fill.a1] a1 value
-     * @param {("X"|"O")} [fill.b1] b1 value
-     * @param {("X"|"O")} [fill.c1] c1 value
-     * @param {("X"|"O")} [fill.a2] a2 value
-     * @param {("X"|"O")} [fill.b2] b2 value
-     * @param {("X"|"O")} [fill.c2] c2 value
-     * @param {("X"|"O")} [fill.a3] a3 value
-     * @param {("X"|"O")} [fill.b3] b3 value
-     * @param {("X"|"O")} [fill.c3] c3 value
+     * @param {"X"|"O"} [fill.a1] a1 value
+     * @param {"X"|"O"} [fill.b1] b1 value
+     * @param {"X"|"O"} [fill.c1] c1 value
+     * @param {"X"|"O"} [fill.a2] a2 value
+     * @param {"X"|"O"} [fill.b2] b2 value
+     * @param {"X"|"O"} [fill.c2] c2 value
+     * @param {"X"|"O"} [fill.a3] a3 value
+     * @param {"X"|"O"} [fill.b3] b3 value
+     * @param {"X"|"O"} [fill.c3] c3 value
      * @param {object} color Color params
      * @param {string} [color.bg] Background clolor
      * @param {string} [color.bar] TicTacToe bar color
@@ -1253,7 +1253,7 @@ class Canvacord {
 
         return canvas.toBuffer();
     }
-    
+
     /**
      * Discord Reply Clone
      * @param {object} options Options
@@ -1347,7 +1347,7 @@ class Canvacord {
         ctx.font = "29px Whitney";
         ctx.globalAlpha = 0.7;
         ctx.fillStyle = "#d1d1d1";
-        await Util.renderEmoji(ctx, Util.shorten(mainText, 64), 195 + 20 + 20, 100 + 5 - 20);
+        ctx.fillText(Util.shorten(mainText, 64), 195 + 20 + 20, 100 + 5 - 20);
 
         ctx.strokeStyle = "#a3a2a2";
         ctx.lineWidth = 4;

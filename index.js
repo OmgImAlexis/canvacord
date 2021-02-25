@@ -10,7 +10,7 @@ try {
 } catch(e) {}
 
 /**
- * @param {string} moduleName module name
+ * @param {stirng} moduleName module name
  */
 function load(moduleName) {
     try {
