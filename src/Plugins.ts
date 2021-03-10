@@ -23,4 +23,4 @@ const data = {
     renderEmoji,
 };
 
-export default data;
+export default data as any;
