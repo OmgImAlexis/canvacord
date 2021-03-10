@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "module": "./dist/esm/index.js",
   "scripts": {
-    "docs": "docgen --source src --custom docs/index.yml --output docs/docs.json",
-    "docs:test": "docgen --source src --custom docs/index.yml",
-    "build": "tsup ./index.ts --external discord-canvas --format esm,cjs --legacy-output --dts",
+    "docs": "./node_modules/.bin/docgen --source src --custom docs/index.yml --output docs/docs.json",
+    "docs:test": "./node_modules/.bin/docgen --source src --custom docs/index.yml",
+    "build": "./node_modules/.bin/tsup ./index.ts --external discord-canvas --format esm,cjs --legacy-output --dts",
     "test": "cd test && node .",
     "prepare": "npm run build"
   },
